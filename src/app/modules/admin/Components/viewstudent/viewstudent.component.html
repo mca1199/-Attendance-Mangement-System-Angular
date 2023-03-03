@@ -1,0 +1,113 @@
+<style>
+    td{
+    border-style:ridge; 
+    text-align: center;
+}
+table{
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.trhead{
+    background-color: black;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+.right-container {
+        display: block;
+        margin-left: auto;
+    }
+
+    .search-box {
+        border:#1f80e0;
+        border-bottom: 1px solid #aaa;
+        background: transparent;
+        outline: none;
+        height: 30px;
+        color:black;
+        width: 250px;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.5s;
+    }
+
+    .search-box:focus {
+        width: 250px;
+        border-color: #1f80e0;
+    }
+    .sub-btn {
+        background: #1f80e0;
+        height: 30px;
+        padding: 0 20px;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        margin: 0 10px;
+    }
+    h4{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        color: brown;
+    }
+</style>
+<h4>Search By Student Roll</h4>
+<form>
+<div class="right-container">
+    <input type="text" class="search-box" placeholder="Enter The Student Roll" />
+    <button class="sub-btn">Search</button>
+</div>
+</form>
+<h4> Delete Student </h4>
+<form #studentsForm="ngForm" (ngSubmit)="getStudentsFromData(studentsForm.value)" >
+    <div class="right-container">
+        <input type="text" ngModel class="search-box" name="id" placeholder="Enter The Student Roll" />
+        <button class="sub-btn">Delete</button>
+    </div>
+    </form>
+<h1>Student Details</h1>
+<table>
+    <tr class="trhead">
+         <td>ID</td>
+        <td>Name </td>
+        <td> Parents Name</td>
+        <td>Email</td>
+        <td>Password </td>
+        <td>Roll No</td>
+        <td>Semester </td>
+        <td>Cource</td>
+        <td>Session</td>
+        <td>User_Type </td>
+        <td>Address </td>
+        <td>Gender</td>
+        <td>contact Number</td>
+        <td>DOB </td>
+        
+
+
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.p_Name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.password}}</td>
+        <td>{{student.roll_No}}</td>
+        <td>{{student.semester}}</td>
+        <td>{{student.cource}}</td>
+        <td>{{student.session}}</td>
+        <td>{{student.userType}}</td>
+        <td>{{student.address}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.contact_Number}}</td>
+        <td>{{student.dob}}</td>
+       
+    </tr>
+
+</table>

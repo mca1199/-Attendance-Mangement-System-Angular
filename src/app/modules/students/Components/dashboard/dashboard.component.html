@@ -1,0 +1,406 @@
+
+
+<style>.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+
+}
+
+.carousel {
+    display: flex;
+    width: 92%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slider {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.slider-img {
+    flex: 0 0 auto;
+    position: relative;
+    width: 70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.slide-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%, #0c111b00);
+    color: #fff;
+}
+
+.AMS-des {
+    width: 80%;
+    line-height: 30px;
+    padding-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+.des-container {
+    position: relative;
+    width: 92%;
+    margin: auto;
+    height: 10vw;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.des-card {
+
+    min-width: calc(100% / 5 - 10px);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: yellow;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+/* pre{
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+margin-top: 22px;
+} */
+
+/* .title {
+    color: #fff;
+    opacity: 0.9;
+    padding-left: 4%;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
+} */
+
+
+.des-list {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+
+.card-container {
+    position: relative;
+    width: 92%;
+    padding-left: 10px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+
+.card1 {
+    position: relative;
+    min-width: 150px;
+    width: 270px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 40px;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    align-items: center;
+
+}
+
+.card2 {
+    position: relative;
+    min-width: 150px;
+    width: 270px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 118px;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    align-items: center;
+
+}
+
+.card3 {
+    position: relative;
+    min-width: 150px;
+    width: 270px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 118px;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    align-items: center;
+}
+
+.card4 {
+    position: relative;
+    min-width: 150px;
+    width: 270px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 35px;
+    margin-left: 118px;
+    transition: 0.5s;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    align-items: center;
+
+}
+
+
+
+.card1:hover {
+    transform: scale(1.1);
+    background: greenyellow;
+}
+
+.card1:hover .card1-body {
+    opacity: 1;
+
+}
+
+.card2:hover {
+    transform: scale(1.1);
+    background: greenyellow;
+}
+
+.card2:hover .card2-body {
+    opacity: 1;
+}
+
+.card3:hover {
+    transform: scale(1.1);
+    background: greenyellow;
+}
+
+.card3:hover .card3-body {
+    opacity: 1;
+}
+
+.card4:hover {
+    transform: scale(1.1);
+    background: greenyellow;
+}
+
+.card4:hover .card4-body {
+    opacity: 1;
+}
+
+/* .card-btn:hover{
+background: green;
+} */
+
+
+
+.card1-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card2-body {
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card3-body {
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card4-body {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 10%;
+    text-align: center;
+}
+
+
+.des {
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+
+.card-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+
+    background-size: cover;
+    transform: scale(0.4);
+
+}
+
+.card-btn:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(48, 18, 184);
+}
+h1{
+    color: blue;
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: bold;
+}
+a{
+    color: white;
+    margin-top: 500px;
+    text-align: center;
+}
+p{
+    
+    text-align: center;  
+}
+
+.card-btn {
+    position: relative;
+    width: 90%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 35px;
+    cursor: pointer;
+    /* padding: 10px 5px; */
+    border-radius: 5px;
+
+}
+
+.card-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+
+    background-size: cover;
+    transform: scale(0.4);
+
+}
+
+.card-btn:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(48, 18, 184);
+}
+</style>
+
+<body>
+    
+
+    <h1> STUDENT DASHBOARD</h1>
+    <div class="des-container">
+        
+        <div class="des-card">
+
+
+            
+
+        </div>
+
+    </div>
+
+    <div class="des-list">
+
+        <div class="card-container">
+            <div class="card1">
+
+                <div class="card1-body">
+                    <h2 class="name">Attendance</h2>
+                    <button class="card-btn"><p><a routerLink="../viewattendance">View</a></p></button>
+
+
+                </div>
+            </div>
+            
+            <div class="card4">
+                <div class="card4-body">
+                    <h2 class="name">Report</h2>
+
+                    <button class="card-btn"><p><a routerLink="../report">View</a></p></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

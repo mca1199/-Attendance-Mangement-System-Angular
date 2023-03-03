@@ -1,0 +1,63 @@
+<style>
+    td{
+    border-style:ridge; 
+    text-align: center;
+}
+table{
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.trhead{
+    background-color: black;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+
+</style>
+
+
+
+
+
+
+
+
+<h1>Teacher Details</h1>
+
+<table>
+    <tr class="trhead">
+        <td>Id</td>
+        <td>Name </td>
+        <td>Teacher ID</td>
+        <td>Email</td>
+        <td>Password </td>
+        <td>Semester </td>
+        <td>Subject ID </td>
+        <td>Cource</td>
+        <td>contact Number</td>
+        <td>User_Type </td>
+        <td>Address </td>
+       
+
+
+
+    </tr>
+    <tr *ngFor="let teacher of teachers">
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.teacher_id}}</td>
+        <td>{{teacher.email}}</td>
+        <td>{{teacher.password}}</td>
+        <td>{{teacher.semester}}</td>
+        <td>{{teacher.subject_id}}</td>
+        <td>{{teacher.cource}}</td>
+        <td>{{teacher.contact_Number}}</td>
+        <td>{{teacher.userType}}</td>
+        <td>{{teacher.address}}</td>
+        
+    </tr>
+
+</table>

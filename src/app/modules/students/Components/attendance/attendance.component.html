@@ -1,0 +1,88 @@
+
+<style>
+    td{
+    border-style:ridge; 
+    text-align: center;
+}
+table{
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+.trhead{
+    background-color: black;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+</style>
+<form #studentsForm="ngForm" (ngSubmit)="getAttendanceFromData(studentsForm.value)">
+
+    <h1> Mark Attendance </h1>
+<table>
+    <tr class="trhead">
+    
+        <td>Attendance ID</td>
+        <td>Student Roll</td>
+        <td>Mark Attendance</td>
+        
+
+
+
+    </tr>
+    <tr >
+        
+    
+        <td><input type="number" ngModel name="attendanceID" placeholder="Attendance ID"></td>
+        <td><input type="number" ngModel name="studentId" placeholder="Student ID"></td>
+        <td><button>Present</button></td>
+        
+        
+       
+    </tr>
+    
+
+</table>
+</form>
+
+<!-- <h1> Student Attendance Details</h1> -->
+<table>
+    <tr class="trhead">
+        <!-- <td>ID</td> -->
+        <!-- <td>Name</td> -->
+        <!-- <td>Attendance ID</td>
+        <td>Student Roll</td> -->
+        <!-- <td>Session</td>
+        <td>Semester </td>
+        <td>Subject ID </td>
+        <td>Cource</td>
+        <td>Date</td>
+        <td>Time</td> -->
+        <!-- <td>Status</td> -->
+        
+
+
+
+    </tr>
+    <tr *ngFor="let attendance of attendances">
+        
+        <!-- <td>{{attendance.id}}</td> -->
+        <!-- <td>{{attendance.name}}</td> -->
+        <!-- <td>{{attendance.attendanceID}}</td> -->
+        <!-- <td>{{attendance.studentId}}</td> -->
+        <!-- <td>{{attendance.session}}</td>
+        <td>{{attendance.semester}}</td>
+        <td>{{attendance.subject_Id}}</td>
+        <td>{{attendance.cource}}</td>
+        <td>{{attendance.date}}</td>
+        <td>{{attendance.time}}</td> -->
+        <!-- <td>{{attendance.markattendanc}}</td> -->
+        
+        
+       
+    </tr>
+    
+
+</table>
+
